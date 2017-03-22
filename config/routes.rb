@@ -1,4 +1,17 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
+
+
+get '/ads' => 'ads#index'
+post '/ads' => 'ads#create'
+get '/ads/new' => 'ads#new'
+get '/ads/:id/edit' => 'ads#edit'
+get '/ads/:id' => 'ads#show', as: :'ad'
+patch '/ads/:id/update' => 'ads#update'
+put '/ads/:id/update' => 'ads#update'
+delete '/ads/:id' => 'ads#destroy', as: :'ad_delete'
+
+#resources :ads
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
