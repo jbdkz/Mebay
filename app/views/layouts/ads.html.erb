@@ -1,27 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//WC3//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhml1/DTD/xhtml1-transistion.dtd">
+<html xmlns="http://www.w3.org.1999/xhtml">
 <head>
-	<title>Ads: <%= controller.action_name %></title>
-    <%= stylesheet_link_tag 'default.css' %>
+    <title>Ads: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'default.css' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-link' => true %>
+  <%= javascript_include_tag 'application', 'data-turbo-track' => true %> 
+  <%= csrf_meta_tags %>
+
 </head>
-<body>
-    <div id="wrapper">
-		<div id="header">
-			<div>
-
-				<h1>MeBay</h1>
-				<ul id="nav">
-					<li><a href="/ads/">All Ads</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<div id="content">
-		  <%= yield %>
-		</div>
-		<div id="clearfooter"></div>
-    </div>
-	<div id="footer"></div>
-</body>
+ <body>
+  <div id="wrapper">
+    <div id="header">
+     <div>
+       <h1>MeBay</h1>   
+         <ul id="nav">
+          <li><a href="/ads/">All Ads</a></li>
+         </ul>
+      </div>
+    </div> 
+   <div id="content">   
+     <%= yield %>
+   </div>
+   <div id="clearfooter"></div>
+  </div>
+   <div id="footer"></div>
+ </body>
 </html>

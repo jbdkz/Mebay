@@ -39,7 +39,7 @@ end
 def destroy
   @ad = Ad.find(params[:id])
   @ad.destroy
-  redirect_to '/ads/'
+  redirect_to '/ads'
 end
 
 private

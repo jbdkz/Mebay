@@ -2,8 +2,8 @@
 <h1>All Ads</h1>
 <ul>
 <% @ads.each do |t| %>
-  <li><%= link_to t.name, ad_path(t)  %>
-      <%= link_to 'Delete', ad_delete_path(t), data: {confirm: 'Are you sure?'}  %> </li>
+  <li><%= link_to t.name, ad_path(t) %>
+  <%= link_to 'Delete', ad_path(t), method: :delete, data: { confirm: 'Are you sure?'} %></li>
 <% end %>
 </ul>
 

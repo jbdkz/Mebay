@@ -1,14 +1,13 @@
 Rails.application.routes.draw do 
 
-
 get '/ads' => 'ads#index'
 post '/ads' => 'ads#create'
-get '/ads/new' => 'ads#new'
-get '/ads/:id/edit' => 'ads#edit'
-get '/ads/:id' => 'ads#show', as: :'ad'
-patch '/ads/:id/update' => 'ads#update'
-put '/ads/:id/update' => 'ads#update'
-delete '/ads/:id' => 'ads#destroy', as: :'ad_delete'
+get '/ads/new' => 'ads#new', as: :new_ad
+get '/ads/:id/edit' => 'ads#edit', as: :edit_ad 
+get '/ads/:id' => 'ads#show', as: :ad
+patch '/ads/:id' => 'ads#update'
+put '/ads/:id' => 'ads#update'
+delete '/ads/:id' => 'ads#destroy'
 
 #resources :ads
 
